@@ -74,7 +74,7 @@ colorCopy.push('purple');
 // Create a new array called 'middleNums' from the numbers array that will capture only the middle numbers (2, 3, 4).
 const numbers = [1, 2, 3, 4, 5]
 
-// let middleNums = numbers.
+let middleNums = numbers.slice (1, 4);
 
 //////////////////PROBLEM 11////////////////////
 
@@ -149,12 +149,12 @@ let total = myNumbers.reduce((acc, curr) => {
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-// let myNumbersIndex = [];
-// myNumbers.forEach((el) => 
-// myNumbersIndex.push(
-// indexOf(element))
-
-// )
+let myNumbersIndex = [];
+myNumbers.forEach((el, i) => {
+	myNumbersIndex.push(i);
+}
+  
+)
 
 //////////////////PROBLEM 18////////////////////
 
@@ -185,4 +185,8 @@ let enemies = people.filter((el) => {
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
-let totallyAwesome = people.reduce()
+let {awesomeLevel} = people[i];
+
+let totallyAwesome = awesomeLevel.reduce((acc,curr) =>{
+	return acc + curr;
+})
